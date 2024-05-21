@@ -4,21 +4,12 @@ var app = express();
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var path = require('path');
-var comments = require('./comments.json');
-var _ = require('underscore');
+var exphbs = require('express-handlebars');
+//var handlebars = require('handlebars');
+//var HandlebarsIntl = require('handlebars-intl');
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// GET /comments
-app.get('/comments', function(req, res) {
-  res.setHeader('Cache-Control', 'no-cache');
-  res.json(comments);
-});
-
-// POST /comments
-app.post('/comments', function(req, res) {
-  res.setHeader('Cache-Control', 'no-cache');
-  var comment = {
-    id: Date.now(),
+//var helpers = require('handlebars-helpers')();
+//var HandlebarsIntl = require('handlebars-intl');
+//var moment = require('moment');
+//var moment = require('moment');
+//var moment = require('moment
